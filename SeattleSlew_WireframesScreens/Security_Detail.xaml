@@ -1,0 +1,177 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:local="clr-namespace:SeattleSlew_WireframesScreens"
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+	mc:Ignorable="d"
+	x:Class="SeattleSlew_WireframesScreens.Security_Detail"
+	Width="800" Height="600" Foreground="#333333">
+
+	<Grid x:Name="LayoutRoot" Background="White" DataContext="{Binding Source={StaticResource securitiesSampleDataSource}}">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto"/>
+			<ColumnDefinition Width="Auto"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<local:Securities_ADVS Grid.Column="0" Grid.RowSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" d:IsPrototypingComposition="True" BorderBrush="Transparent"/>
+		<sdk:GridSplitter Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Width="3" Background="#424242" />
+		<TextBlock Margin="5" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="0" VerticalAlignment="Top" Style="{StaticResource TextBlock-Sketch}" TextWrapping="Wrap" Text="Securities: ADVENT SOFTWARE, INC." FontSize="24" />
+		<local:Buttons Grid.Row="0" Grid.Column="3" VerticalAlignment="Top" HorizontalAlignment="Right" d:IsPrototypingComposition="True"/>
+		<sdk:TabControl Style="{StaticResource TabControl-Sketch}" Grid.Row="1" Grid.Column="2">
+			<sdk:TabItem Style="{StaticResource TabItem-Sketch}" Header="Basic">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}">Type</TextBlock>
+					<TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}">Symbol</TextBlock>
+					<TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}">CUSIP/Other</TextBlock>
+					<TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}">Description</TextBlock>
+					<TextBlock Grid.Row="4" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}">Asset Class</TextBlock>
+					<TextBlock Grid.Row="5" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}">Industry Group</TextBlock>
+					<TextBlock Grid.Row="6" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}">Industry Sector</TextBlock>
+					<TextBlock Grid.Row="7" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}">Exchange</TextBlock>
+					<TextBlock Grid.Row="8" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}">Risk Country</TextBlock>
+					<TextBlock Grid.Row="9" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}">Issue Country</TextBlock>
+
+					<ComboBox Grid.Row="0" Grid.Column="1" Style="{StaticResource ComboBox-Sketch}">
+						<ComboBoxItem IsSelected="True">csus</ComboBoxItem>
+						<ComboBoxItem>cbus</ComboBoxItem>
+						<ComboBoxItem>caus</ComboBoxItem>
+						<ComboBoxItem>cfus</ComboBoxItem>
+						<ComboBoxItem>cvus</ComboBoxItem>
+					</ComboBox>
+					<TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource BasicTextBox-Sketch}" Text="advs" />
+					<TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource BasicTextBox-Sketch}" Text="012345678" />
+					<TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource BasicTextBox-Sketch}" Text="ADVENT SOFTWARE, INC." />
+					<ComboBox Grid.Row="4" Grid.Column="1" Style="{StaticResource ComboBox-Sketch}">
+						<ComboBoxItem IsSelected="True">Use Security Type Information</ComboBoxItem>
+						<ComboBoxItem>Equities</ComboBoxItem>
+						<ComboBoxItem>Cash</ComboBoxItem>
+						<ComboBoxItem>Fixed Income</ComboBoxItem>
+						<ComboBoxItem>Other</ComboBoxItem>
+					</ComboBox>
+					<ComboBox Grid.Row="5" Grid.Column="1" Style="{StaticResource ComboBox-Sketch}">
+						<ComboBoxItem>INTERNET INFORMATION SERVICES</ComboBoxItem>
+						<ComboBoxItem>SOFTWARE</ComboBoxItem>
+						<ComboBoxItem>CONSUMER DISCRETIONARY</ComboBoxItem>
+						<ComboBoxItem>FINANCIAL SERVICES</ComboBoxItem>
+					</ComboBox>
+					<ComboBox Grid.Row="6" Grid.Column="1" Style="{StaticResource ComboBox-Sketch}">
+						<ComboBoxItem>TECHNOLOGY</ComboBoxItem>
+						<ComboBoxItem>ENERGY &amp; OIL</ComboBoxItem>
+						<ComboBoxItem>BASIC MATERIALS</ComboBoxItem>
+					</ComboBox>
+					<ComboBox Grid.Row="7" Grid.Column="1" Style="{StaticResource ComboBox-Sketch}">
+						<ComboBoxItem>TECHNOLOGY</ComboBoxItem>
+						<ComboBoxItem>ENERGY &amp; OIL</ComboBoxItem>
+						<ComboBoxItem>BASIC MATERIALS</ComboBoxItem>
+					</ComboBox>
+					<ComboBox Grid.Row="8" Grid.Column="1" Style="{StaticResource ComboBox-Sketch}">
+						<ComboBoxItem IsSelected="True">Use Security Type Information</ComboBoxItem>
+						<ComboBoxItem>United States</ComboBoxItem>
+						<ComboBoxItem>Canada</ComboBoxItem>
+					</ComboBox>
+					<ComboBox Grid.Row="9" Grid.Column="1" Style="{StaticResource ComboBox-Sketch}">
+						<ComboBoxItem IsSelected="True">United States</ComboBoxItem>
+						<ComboBoxItem>Canada</ComboBoxItem>
+					</ComboBox>
+				</Grid>
+			</sdk:TabItem>
+			<sdk:TabItem Style="{StaticResource TabItem-Sketch}" Header="Equity">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}">Next Payment Date</TextBlock>
+					<TextBlock Grid.Row="0" Grid.Column="2" Style="{StaticResource BasicTextBlock-Sketch}">Dividend Rate</TextBlock>
+					<TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}">Payment Frequency</TextBlock>
+					<TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}">S&amp;P Rating</TextBlock>
+					<TextBlock Grid.Row="2" Grid.Column="2" Style="{StaticResource BasicTextBlock-Sketch}">Moody Rating</TextBlock>
+					<TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}">State</TextBlock>
+
+					<sdk:DatePicker Grid.Row="0" Grid.Column="1"></sdk:DatePicker>
+					<TextBox Grid.Row="0" Grid.Column="3" Style="{StaticResource BasicTextBox-Sketch}" Text="0.0" />
+					<ComboBox Grid.Row="1" Grid.Column="1" Style="{StaticResource ComboBox-Sketch}" Grid.ColumnSpan="4">
+						<ComboBoxItem IsSelected="True">Use Security Type Information</ComboBoxItem>
+						<ComboBoxItem>Monthly</ComboBoxItem>
+						<ComboBoxItem>Quarterly</ComboBoxItem>
+						<ComboBoxItem>Annual</ComboBoxItem>
+						<ComboBoxItem>Semiannual</ComboBoxItem>
+					</ComboBox>
+					<TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource BasicTextBox-Sketch}"/>
+					<TextBox Grid.Row="2" Grid.Column="3" Style="{StaticResource BasicTextBox-Sketch}"/>
+					<ComboBox Grid.Row="3" Grid.Column="1" Style="{StaticResource ComboBox-Sketch}">
+						<ComboBoxItem>Alabama</ComboBoxItem>
+						<ComboBoxItem>Alaska</ComboBoxItem>
+						<ComboBoxItem>Arizona</ComboBoxItem>
+						<ComboBoxItem>Arkansas</ComboBoxItem>
+						<ComboBoxItem>...</ComboBoxItem>
+					</ComboBox>
+				</Grid>
+			</sdk:TabItem>
+			<sdk:TabItem Style="{StaticResource TabItem-Sketch}" Header="User Defined">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}">Security User Defined 1</TextBlock>
+					<TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}">Security User Defined 2</TextBlock>
+					<TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}">Security User Defined 3</TextBlock>
+
+					<ComboBox Grid.Row="0" Grid.Column="1" Style="{StaticResource ComboBox-Sketch}">
+						<ComboBoxItem>Not Classified</ComboBoxItem>
+					</ComboBox>
+					<ComboBox Grid.Row="1" Grid.Column="1" Style="{StaticResource ComboBox-Sketch}">
+						<ComboBoxItem>Not Classified</ComboBoxItem>
+					</ComboBox>
+					<ComboBox Grid.Row="2" Grid.Column="1" Style="{StaticResource ComboBox-Sketch}">
+						<ComboBoxItem>Not Classified</ComboBoxItem>
+					</ComboBox>
+				</Grid>
+			</sdk:TabItem>
+		</sdk:TabControl>
+	</Grid>
+</UserControl>

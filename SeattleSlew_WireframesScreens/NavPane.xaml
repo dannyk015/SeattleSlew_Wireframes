@@ -1,0 +1,385 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:epm="http://schemas.microsoft.com/expression/2010/prototyping/mockups"
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+	xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:pi="http://schemas.microsoft.com/prototyping/2010/interactivity"
+	mc:Ignorable="d"
+	x:Class="SeattleSlew_WireframesScreens.NavPane"
+	Width="Auto" Height="Auto" FontFamily="/SeattleSlew_Wireframes.Screens;component/Fonts/BuxtonSketch.ttf#Buxton Sketch" >
+
+	<Grid x:Name="LayoutRoot">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<ComboBox Grid.Row="0" HorizontalAlignment="Stretch" Style="{StaticResource ComboBox-Sketch}" VerticalAlignment="Top">
+			<ComboBoxItem Content="All" IsSelected="True"/>
+			<ComboBoxItem Content="Portfolio">
+				<i:Interaction.Triggers>
+					<i:EventTrigger EventName="GotFocus">
+						<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.Portfolios_Only"/>
+					</i:EventTrigger>
+				</i:Interaction.Triggers>
+			</ComboBoxItem>
+			<ComboBoxItem Content="Performance"/>
+			<ComboBoxItem Content="Information"/>
+			<ComboBoxItem Content="Market Data"/>
+			<ComboBoxItem Content="Reports"/>
+		</ComboBox>
+		<TextBox Grid.Row="1" HorizontalAlignment="Stretch" Height="23" FontSize="12" Style="{StaticResource TextBox-Sketch}" TextWrapping="NoWrap" Text="Search" />
+		<sdk:TreeView x:Name="Root" Grid.Row="2" BorderBrush="Transparent" FontSize="14">
+			<sdk:TreeViewItem x:Name="Portfolio" Header="Portfolio" Foreground="#333333" IsExpanded="True">
+				<sdk:TreeViewItem x:Name="Portfolios" Header="Portfolios" IsExpanded="False">
+					<sdk:TreeViewItem Header="case">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.case_cli"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem Header="casef">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.casef_cli"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+				</sdk:TreeViewItem>
+				<sdk:TreeViewItem x:Name="Groups" Header="Groups">
+					<sdk:TreeViewItem Header="master">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.master_grp"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem Header="casefam">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.casefam_grp"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem Header="all">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.all_grp"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+				</sdk:TreeViewItem>
+				<sdk:TreeViewItem x:Name="Composites" Header="Composites">
+					<sdk:TreeViewItem Header="balanced">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.balanced_cpg"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem Header="equity">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.equity_cpg"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem Header="fixed">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.fixed_cpg"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+				</sdk:TreeViewItem>
+				<sdk:TreeViewItem x:Name="Statement" Header="Statements" Foreground="#333333">
+					<sdk:TreeViewItem Header="case"/>
+					<sdk:TreeViewItem Header="casef"/>
+				</sdk:TreeViewItem>
+			</sdk:TreeViewItem>
+			<sdk:TreeViewItem x:Name="Performance" Header="Performance" Foreground="#333333" IsExpanded="False">
+				<sdk:TreeViewItem x:Name="Net" Header="Performance (Net)">
+					<sdk:TreeViewItem Header="case">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.case_prf"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem Header="casef">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.casef_prf"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem Header="casefam">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.casefam_prf"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+				</sdk:TreeViewItem>
+				<sdk:TreeViewItem x:Name="Gross" Header="Performance (Gross)">
+					<sdk:TreeViewItem Header="case">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.case_pbf"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem Header="casef">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.casef_pbf"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem Header="casefam">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.casefam_pbf"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+				</sdk:TreeViewItem>
+				<sdk:TreeViewItem x:Name="Index" Header="Index" Foreground="#333333">
+					<sdk:TreeViewItem Header="djia" >
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.djia_dex"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem Header="sp500" >
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.sp500"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+				</sdk:TreeViewItem>
+			</sdk:TreeViewItem>
+			<sdk:TreeViewItem x:Name="Information" Header="Information" Foreground="#333333" IsExpanded="False">
+				<sdk:TreeViewItem x:Name="Securities" Header="Securities" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Selected">
+							<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.Copy_of_Start"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+					<sdk:TreeViewItem x:Name="ADUS" Header="AMERICAN DEPOSITORY RECEIPTS (adus)">
+						<sdk:TreeViewItem Header="vgtsx"/>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem x:Name="BRUS" Header="BROKERAGE ACCOUNTS (brus)">
+						<sdk:TreeViewItem Header="BOFA"/>
+						<sdk:TreeViewItem Header="BSDA"/>
+						<sdk:TreeViewItem Header="CABR"/>
+						<sdk:TreeViewItem Header="FBCO"/>
+						<sdk:TreeViewItem Header="GSCO"/>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem x:Name="CAUS" Header="CASH ACCOUNTS (caus)">
+						<sdk:TreeViewItem Header="CASH"/>						
+						<sdk:TreeViewItem Header="DIVACC"/>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem x:Name="CBUS" Header="CORPOATE BONDS (cbus)">
+						<sdk:TreeViewItem Header="0018FAAE5"/>
+						<sdk:TreeViewItem Header="0018FAAE5"/>
+						<sdk:TreeViewItem Header="0018FAAE5"/>
+						<sdk:TreeViewItem Header="0018FAAE5"/>
+						<sdk:TreeViewItem Header="0018FAAE5"/>
+						<sdk:TreeViewItem Header="0018FAAE5"/>
+						<sdk:TreeViewItem Header="0018FAAE5"/>
+						<sdk:TreeViewItem Header="0018FAAE5"/>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem x:Name="CSUS" Header="COMMON STOCK (csus)">
+						<sdk:TreeViewItem Header="advs"/>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem x:Name="CSUS_s" Header="SHORT STOCK (csus)">
+						<sdk:TreeViewItem Header="advs"/>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem x:Name="FHUS" Header="FHLMC (fhus)">
+						<sdk:TreeViewItem Header="01f0424b6"/>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem x:Name="GNMA" Header="GNMA (gmus)">
+						<sdk:TreeViewItem Header="362091n89"/>
+					</sdk:TreeViewItem>
+				</sdk:TreeViewItem>
+				<sdk:TreeViewItem x:Name="Type" Header="Security Type" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Selected">
+							<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.SecType"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</sdk:TreeViewItem>
+				<sdk:TreeViewItem x:Name="Type_Group" Header="Security Type Group" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Selected">
+							<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.SecTypeGroup"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</sdk:TreeViewItem>
+				<sdk:TreeViewItem x:Name="AssetClass" Header="Asset Class" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Selected">
+							<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.AssetClass"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</sdk:TreeViewItem>
+				<sdk:TreeViewItem x:Name="Sector" Header="Industry Sector" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Selected">
+							<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.IndustrySector"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</sdk:TreeViewItem>
+				<sdk:TreeViewItem x:Name="Group" Header="Industry Group" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Selected">
+							<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.IndustryGroup"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</sdk:TreeViewItem>
+				<sdk:TreeViewItem x:Name="Splits" Header="Splits" Foreground="#333333" IsSelected="False">
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Selected">
+							<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.Split"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</sdk:TreeViewItem>
+				<sdk:TreeViewItem x:Name="Regional" Header="Regional">
+					<sdk:TreeViewItem x:Name="Countries" Header="Countries" >
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.Country"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem x:Name="Currencies" Header="Currencies" >
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.Currency"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem x:Name="Regions" Header="Regions" />
+					<sdk:TreeViewItem x:Name="State" Header="State" >
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.State"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem x:Name="WithHolding" Header="Withholding Tax" Foreground="#333333" IsSelected="False">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.WithholdingTax"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+				</sdk:TreeViewItem>
+			</sdk:TreeViewItem>
+			<sdk:TreeViewItem x:Name="Reports" Header="Reports" Foreground="#333333" IsExpanded="False">
+				<sdk:TreeViewItem Header="Portfolio">
+					<sdk:TreeViewItem Header="Summary" />
+					<sdk:TreeViewItem Header="Portfolio Summary and Target" />
+					<sdk:TreeViewItem Header="Appraisal" >
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.AppraisalReport"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem Header="Appraisal with Income" />
+					<sdk:TreeViewItem Header="Realized Gains/Losses" />
+					<sdk:TreeViewItem Header="Unrealized Gains/Losses" />
+					<sdk:TreeViewItem Header="Transaction Summary" />
+					<sdk:TreeViewItem Header="Summary by Transaction Type" />
+					<sdk:TreeViewItem Header="Income and Expenses" />
+					<sdk:TreeViewItem Header="Dividend - Security Holding Period" />
+					<sdk:TreeViewItem Header="Cash Ledger" />
+					<sdk:TreeViewItem Header="Withholding Tax Reclaim" />
+					<sdk:TreeViewItem Header="Purchase and Sale" />
+					<sdk:TreeViewItem Header="Portfolio Diversification" />
+					<sdk:TreeViewItem Header="Portfolio Activity Summary" />
+					<sdk:TreeViewItem Header="Largest Holdings" />
+					<sdk:TreeViewItem Header="Portfolio Turnover" />
+					<sdk:TreeViewItem Header="Cover Page" />
+					<sdk:TreeViewItem Header="List Missing Cost Basis Data" />
+					<sdk:TreeViewItem Header="Billing Statements" />
+					<sdk:TreeViewItem Header="Bank Notification Letter" />
+					<sdk:TreeViewItem Header="Appraisal Without Costs" />
+					<sdk:TreeViewItem Header="Appraisal with Yield" />
+					<sdk:TreeViewItem Header="1099 Reconciliation" />
+					<sdk:TreeViewItem Header="Funds Held by Portfolio" />				</sdk:TreeViewItem>
+				<sdk:TreeViewItem Header="Management">
+					<sdk:TreeViewItem Header="Assets Under Management" />
+					<sdk:TreeViewItem Header="Master Stock or Bond" />
+					<sdk:TreeViewItem Header="Fundamental Data" />
+					<sdk:TreeViewItem Header="Securities Held Longer Than Holding Period" />
+					<sdk:TreeViewItem Header="Maturity and Expiration Alert" />
+					<sdk:TreeViewItem Header="Change in Market Value" />
+					<sdk:TreeViewItem Header="Portfolio Register" />
+					<sdk:TreeViewItem Header="Portfolio Commissions" />
+					<sdk:TreeViewItem Header="Broker Commissions" />
+					<sdk:TreeViewItem Header="Commission Purpose" />
+					<sdk:TreeViewItem Header="Management Fees" />
+					<sdk:TreeViewItem Header="Master Transaction Summary" />
+					<sdk:TreeViewItem Header="Master Cash Balances" />
+					<sdk:TreeViewItem Header="Master Interest Accruals" />
+					<sdk:TreeViewItem Header="Master Portfolio Turnover" />
+					<sdk:TreeViewItem Header="Security Cross Reference" />
+					<sdk:TreeViewItem Header="Security Type Cross Reference" />
+					<sdk:TreeViewItem Header="Multi-Security Cross Reference" />
+					<sdk:TreeViewItem Header="Multi-Type Cross Reference" />
+					<sdk:TreeViewItem Header="Buy Allocation" />
+					<sdk:TreeViewItem Header="Model Portfolio" />
+					<sdk:TreeViewItem Header="Trade Activity" />
+					<sdk:TreeViewItem Header="Single Fund Cross Reference" />
+					<sdk:TreeViewItem Header="Multi-Fund Cross Reference" />
+					<sdk:TreeViewItem Header="13D Report" />
+					<sdk:TreeViewItem Header="13F Report" />
+				</sdk:TreeViewItem>
+				<sdk:TreeViewItem Header="Fixed" Foreground="#333333">
+					<sdk:TreeViewItem Header="Amortization and Accretion" />
+					<sdk:TreeViewItem Header="Principal Paydowns and Interest Payments" />
+					<sdk:TreeViewItem Header="Fixed Income Portfolio" />
+					<sdk:TreeViewItem Header="Fixed Income Holdings" />
+					<sdk:TreeViewItem Header="Fixed Income Distribution" />
+					<sdk:TreeViewItem Header="Fixed Income Cash Projection" />
+					<sdk:TreeViewItem Header="Fixed Income Maturity Projection" />
+					<sdk:TreeViewItem Header="Interest Accruals" />
+					<sdk:TreeViewItem Header="Maturity and Expiration to Put/Call Dates" />
+					<sdk:TreeViewItem Header="Calculate Bond Interest" />
+					<sdk:TreeViewItem Header="Data Display" />
+				</sdk:TreeViewItem>
+				<sdk:TreeViewItem Header="Performance" Foreground="#333333">
+					<sdk:TreeViewItem Header="Performance" />
+					<sdk:TreeViewItem Header="Performance by Asset Class" />
+					<sdk:TreeViewItem Header="Performance by Security" />
+					<sdk:TreeViewItem Header="Performance Summary" />
+					<sdk:TreeViewItem Header="Individual Account Summary" />
+					<sdk:TreeViewItem Header="Performance History" />
+					<sdk:TreeViewItem Header="Performance History by Asset Class" />
+					<sdk:TreeViewItem Header="Performance History by Sector" />
+					<sdk:TreeViewItem Header="Performance History with User Defined Columns" />
+					<sdk:TreeViewItem Header="Performance History for Selected Periods" />
+					<sdk:TreeViewItem Header="Master Performance History with User Defined Columns" />
+					<sdk:TreeViewItem Header="Portfolio Performance Cross Reference" />
+					<sdk:TreeViewItem Header="Composite Dispersion" />
+					<sdk:TreeViewItem Header="Date to Date Gain and Loss" />
+					<sdk:TreeViewItem Header="Asset Reconciliation" />
+					<sdk:TreeViewItem Header="ACB Proof" />
+					<sdk:TreeViewItem Header="Historical Market Value" />
+					<sdk:TreeViewItem Header="Update Performance History" />
+					<sdk:TreeViewItem Header="Consolidate Performance History Transactions" />
+					<sdk:TreeViewItem Header="Erase Performance Data" />
+					<sdk:TreeViewItem Header="Significant Contributions/Withdrawals" />
+					<sdk:TreeViewItem Header="Composite Membership" />				</sdk:TreeViewItem>
+			</sdk:TreeViewItem>
+		</sdk:TreeView>
+	</Grid>
+</UserControl>

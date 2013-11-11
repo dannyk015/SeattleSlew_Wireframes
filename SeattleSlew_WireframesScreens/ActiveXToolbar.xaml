@@ -1,0 +1,28 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:epm="http://schemas.microsoft.com/expression/2010/prototyping/mockups"
+	mc:Ignorable="d"
+	x:Class="SeattleSlew_WireframesScreens.ActiveXToolbar">
+
+	<Grid x:Name="LayoutRoot">
+		<StackPanel MinHeight="26" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="2" Orientation="Horizontal">
+			<Button ToolTipService.ToolTip="Find" Style="{StaticResource Button-Sketch}" ><Image Source="./Images/find.png"/></Button>
+			<Button ToolTipService.ToolTip="Replace"  Style="{StaticResource Button-Sketch}" ><Image Source="./Images/replace.png"/></Button>
+			<Button ToolTipService.ToolTip="Go to"  Style="{StaticResource Button-Sketch}" ><Image Source="./Images/replace.png"/></Button>
+			<Button ToolTipService.ToolTip="Validate"  Style="{StaticResource Button-Sketch}" ><Image Source="./Images/validate.png"/></Button>
+			<Button ToolTipService.ToolTip="Delete Line"  Style="{StaticResource Button-Sketch}" ><Image Source="./Images/delete.png"/></Button>
+			<Button ToolTipService.ToolTip="Insert Line"  Style="{StaticResource Button-Sketch}" ><Image Source="./Images/replace.png"/></Button>
+			<Button ToolTipService.ToolTip="Zoom In"  Style="{StaticResource Button-Sketch}" ><Image Source="./Images/zoom_in.png"/></Button>
+			<Button ToolTipService.ToolTip="Post Trade Blotter"  Style="{StaticResource Button-Sketch}" ><Image Source="./Images/blotter_post.png"/></Button>
+			<Button ToolTipService.ToolTip="Options"  Style="{StaticResource Button-Sketch}" ><Image Source="./Images/page_settings.png"/></Button>
+			<Button ToolTipService.ToolTip="Font"  Style="{StaticResource Button-Sketch}" ><Image Source="./Images/replace.png"/></Button>
+			<Button ToolTipService.ToolTip="Cash Balance"  Style="{StaticResource Button-Sketch}" ><Image Source="./Images/rebalance.png"/></Button>
+			<Button ToolTipService.ToolTip="Browse"  Style="{StaticResource Button-Sketch}" ><Image Source="./Images/portfolio_go_to.png"/></Button>
+			<Button ToolTipService.ToolTip="Mixed Case"  Style="{StaticResource Button-Sketch}" ><Image Source="./Images/replace.png"/></Button>
+			<Button ToolTipService.ToolTip="Tran Code Case"  Style="{StaticResource Button-Sketch}" ><Image Source="./Images/replace.png"/></Button>
+		</StackPanel>
+	</Grid>
+</UserControl>

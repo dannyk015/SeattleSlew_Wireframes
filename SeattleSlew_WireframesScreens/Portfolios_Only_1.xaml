@@ -1,0 +1,100 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:epm="http://schemas.microsoft.com/expression/2010/prototyping/mockups"
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+	xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:pi="http://schemas.microsoft.com/prototyping/2010/interactivity"
+	mc:Ignorable="d"
+	x:Class="SeattleSlew_WireframesScreens.Portfolios_Only_1"
+	Width="Auto" Height="Auto" FontFamily="/SeattleSlew_Wireframes.Screens;component/Fonts/BuxtonSketch.ttf#Buxton Sketch" >
+
+	<Grid x:Name="LayoutRoot">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<ComboBox Grid.Row="0" HorizontalAlignment="Stretch" Style="{StaticResource ComboBox-Sketch}" VerticalAlignment="Top">
+			<ComboBoxItem Content="All">
+				<i:Interaction.Triggers>
+					<i:EventTrigger EventName="GotFocus">
+						<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.Start"/>
+					</i:EventTrigger>
+				</i:Interaction.Triggers>
+			</ComboBoxItem>
+			<ComboBoxItem Content="Portfolio" IsSelected="True"/>
+			<ComboBoxItem Content="Performance"/>
+			<ComboBoxItem Content="Index"/>
+			<ComboBoxItem Content="Report"/>
+		</ComboBox>
+		<TextBox Grid.Row="1" HorizontalAlignment="Stretch" Height="23" FontSize="12" Style="{StaticResource TextBox-Sketch}" TextWrapping="NoWrap" Text="Search" />
+		<sdk:TreeView Grid.Row="2" BorderBrush="Transparent" FontSize="14">
+			<sdk:TreeViewItem Header="Portfolio" Foreground="#333333" IsExpanded="True">
+				<sdk:TreeViewItem Header="Portfolios" IsExpanded="True">
+					<sdk:TreeViewItem Header="case">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.case_cli"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem Header="casef">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.casef_cli"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+				</sdk:TreeViewItem>
+				<sdk:TreeViewItem Header="Groups">
+					<sdk:TreeViewItem Header="master">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.master_grp"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem Header="casefam">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.casefam_grp"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem Header="all">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.all_grp"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+				</sdk:TreeViewItem>
+				<sdk:TreeViewItem Header="Composites">
+					<sdk:TreeViewItem Header="balanced">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.balanced_cpg"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem Header="equity">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.equity_cpg"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+					<sdk:TreeViewItem Header="fixed">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Selected">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.fixed_cpg"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</sdk:TreeViewItem>
+				</sdk:TreeViewItem>
+			</sdk:TreeViewItem>
+		</sdk:TreeView>
+	</Grid>
+</UserControl>

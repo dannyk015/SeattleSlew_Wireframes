@@ -1,0 +1,25 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:epm="http://schemas.microsoft.com/expression/2010/prototyping/mockups"
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+	xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:pi="http://schemas.microsoft.com/prototyping/2010/interactivity"
+	mc:Ignorable="d"
+	x:Class="SeattleSlew_WireframesScreens.Dialog_NavPane"
+	Width="Auto" Height="Auto" FontFamily="/SeattleSlew_Wireframes.Screens;component/Fonts/BuxtonSketch.ttf#Buxton Sketch" >
+
+	<Grid x:Name="LayoutRoot" Background="white">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<TextBlock Grid.Row="0" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Files" VerticalAlignment="Top" Margin="5"/>
+		<TextBlock Grid.Row="1" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Shared" VerticalAlignment="Top" Margin="5"/>
+		<TextBlock Grid.Row="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Shared with me" VerticalAlignment="Top" Margin="5"/>
+		<TextBlock Grid.Row="3" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Recent" VerticalAlignment="Top" Margin="5"/>
+	</Grid>
+</UserControl>

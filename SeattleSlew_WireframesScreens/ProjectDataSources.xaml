@@ -1,0 +1,27 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:SampleData="clr-namespace:Expression.Blend.SampleData.securitiesSampleDataSource" xmlns:SampleData1="clr-namespace:Expression.Blend.SampleData.ForwardRatesSampleDataSource" xmlns:SampleData2="clr-namespace:Expression.Blend.SampleData.FactorSampleDataSource" xmlns:SampleData3="clr-namespace:Expression.Blend.SampleData.PriceSampleDataSource" xmlns:SampleData4="clr-namespace:Expression.Blend.SampleData.SpotRateSampleDataSource" xmlns:SampleData5="clr-namespace:Expression.Blend.SampleData.SecTypeGroupSampleDataSource" xmlns:SampleData6="clr-namespace:Expression.Blend.SampleData.AssetClassSampleDataSource" xmlns:SampleData7="clr-namespace:Expression.Blend.SampleData.IndustrySectorSampleDataSource" xmlns:SampleData8="clr-namespace:Expression.Blend.SampleData.IndustryGroupSampleDataSource" xmlns:SampleData9="clr-namespace:Expression.Blend.SampleData.SecTypeSampleDataSource" xmlns:SampleData10="clr-namespace:Expression.Blend.SampleData.CouponDateSampleDataSource" xmlns:SampleData11="clr-namespace:Expression.Blend.SampleData.ResetRateSampleDataSource" xmlns:SampleData12="clr-namespace:Expression.Blend.SampleData.BaseRateSampleDataSource" xmlns:SampleData13="clr-namespace:Expression.Blend.SampleData.WithholdingTaxSampleDataSource" xmlns:SampleData14="clr-namespace:Expression.Blend.SampleData.splitSampleDataSource" xmlns:SampleData15="clr-namespace:Expression.Blend.SampleData.StateSampleDataSource" xmlns:SampleData16="clr-namespace:Expression.Blend.SampleData.CurrencySampleDataSource" xmlns:SampleData17="clr-namespace:Expression.Blend.SampleData.CountrySampleDataSource" xmlns:SampleData18="clr-namespace:Expression.Blend.SampleData.UsersSampleDataSource" xmlns:SampleData19="clr-namespace:Expression.Blend.SampleData.UserGroups" xmlns:SampleData20="clr-namespace:Expression.Blend.SampleData.PortfoliosDataSource" xmlns:SampleData21="clr-namespace:Expression.Blend.SampleData.GroupMemberSampleDataSource" xmlns:SampleData22="clr-namespace:Expression.Blend.SampleData.UserGroupsSampleDataSource" xmlns:SampleData23="clr-namespace:Expression.Blend.SampleData.CompositeMemberSampleDataSource" mc:Ignorable="d">
+	<SampleData23:Report x:Key="CompositeMemberSampleDataSource" d:IsDataSource="True"/>
+	<SampleData21:Report x:Key="GroupMemberSampleDataSource" d:IsDataSource="True"/>
+	<SampleData22:Report x:Key="UserGroupsSampleDataSource" d:IsDataSource="True"/>
+	<SampleData20:Report x:Key="PortfoliosDataSource" d:IsDataSource="True"/>
+	<SampleData15:Report x:Key="StateSampleDataSource" d:IsDataSource="True"/>
+	<SampleData16:Report x:Key="CurrencySampleDataSource" d:IsDataSource="True"/>
+	<SampleData17:Report x:Key="CountrySampleDataSource" d:IsDataSource="True"/>
+	<SampleData5:Report x:Key="SecTypeGroupSampleDataSource" d:IsDataSource="True"/>
+	<SampleData6:Report x:Key="AssetClassSampleDataSource" d:IsDataSource="True"/>
+	<SampleData7:Report x:Key="IndustrySectorSampleDataSource" d:IsDataSource="True"/>
+	<SampleData8:Report x:Key="IndustryGroupSampleDataSource" d:IsDataSource="True"/>
+	<SampleData9:Report x:Key="SecTypeSampleDataSource" d:IsDataSource="True"/>
+	<SampleData10:Report x:Key="CouponDateSampleDataSource" d:IsDataSource="True"/>
+	<SampleData11:Report x:Key="ResetRateSampleDataSource" d:IsDataSource="True"/>
+	<SampleData12:Report x:Key="BaseRateSampleDataSource" d:IsDataSource="True"/>
+	<SampleData13:Report x:Key="WithholdingTaxSampleDataSource" d:IsDataSource="True"/>
+	<SampleData14:Report x:Key="splitSampleDataSource" d:IsDataSource="True"/>
+	<SampleData2:Report x:Key="FactorSampleDataSource" d:IsDataSource="True"/>
+	<SampleData3:Report x:Key="PriceSampleDataSource" d:IsDataSource="True"/>
+	<SampleData4:Report x:Key="SpotRateSampleDataSource" d:IsDataSource="True"/>
+	<SampleData1:Report x:Key="ForwardRatesSampleDataSource" d:IsDataSource="True"/>
+<!-- Resource dictionary entries should be defined here. -->
+	<SampleData:Report x:Key="securitiesSampleDataSource" d:IsDataSource="True"/>
+</ResourceDictionary>

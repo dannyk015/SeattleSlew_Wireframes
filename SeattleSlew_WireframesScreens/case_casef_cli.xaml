@@ -1,0 +1,475 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:local="clr-namespace:SeattleSlew_WireframesScreens"
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+	xmlns:epm="http://schemas.microsoft.com/expression/2010/prototyping/mockups"
+	xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:pi="http://schemas.microsoft.com/prototyping/2010/interactivity"
+	mc:Ignorable="d"
+	x:Class="SeattleSlew_WireframesScreens.case_casef_cli"
+	Width="800" Height="600">
+
+	<Grid x:Name="LayoutRoot" Background="White" DataContext="{Binding Source={StaticResource UserGroupsSampleDataSource}}">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto"/>
+			<ColumnDefinition Width="Auto"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<sdk:GridSplitter Grid.Column="1" Grid.Row="0" Grid.RowSpan="5" Width="3" Background="#424242" />
+		<local:NavPane Grid.Column="0" Grid.Row="0" Grid.RowSpan="10" d:IsPrototypingComposition="True" />
+		<local:Buttons Grid.Row="0" Grid.Column="3" VerticalAlignment="Top" HorizontalAlignment="Right" d:IsPrototypingComposition="True"/>
+		<TextBlock Margin="5" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="0" VerticalAlignment="Top" Style="{StaticResource TextBlock-Sketch}" TextWrapping="Wrap" Text="Portfolio: Evan Case" FontSize="24" />
+		<sdk:TabControl Margin="5,5,5,0" Grid.Column="2" HorizontalAlignment="Stretch" Grid.Row="1" Style="{StaticResource TabControl-Sketch}" VerticalAlignment="Top">
+			<sdk:TabItem x:Name="Transactions" Header="Transactions" Style="{StaticResource TabItem-Sketch}" IsSelected="True">
+				<Grid Background="#FFE5E5E5">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="*"/>
+					</Grid.RowDefinitions>
+					<Image Source="Images/activex_portfolio.png" Grid.Row="1" Stretch="None"/>
+				</Grid>
+			</sdk:TabItem>
+			<sdk:TabItem x:Name="General" Header="General" Style="{StaticResource TabItem-Sketch}">
+				<Grid Background="#FFE5E5E5">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<TextBlock Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Portfolio Information" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="1" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Portfolio Code" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Name 1" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="3" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Name 2" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="4" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Name 3" VerticalAlignment="Top"/>
+
+					<TextBox Grid.Row="1" Grid.Column="1" Text="case" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+					<TextBox Grid.Row="2" Grid.Column="1" Text="Evan Case" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+
+					<TextBox Grid.Row="3" Grid.Column="1" Text="Evan Case Roth IRA" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+					<TextBox Grid.Row="4" Grid.Column="1" Text="" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+					<TextBlock Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Start Date" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Close Date" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Initial Value" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Investment Goal" VerticalAlignment="Top"/>
+					<sdk:DatePicker Grid.Row="1" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Top" Text="12/31/2011"/>
+					<sdk:DatePicker Grid.Row="2" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="3" Grid.Column="3" Text="1,000,000" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto" Width="100" HorizontalAlignment="Left"/>
+					<TextBox Grid.Row="4" Grid.Column="3" Text="Growth" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto" Width="100" HorizontalAlignment="Left"/>
+
+					<TextBlock Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Address Information" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="7" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Address 1" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="7" Grid.Column="1" Text="123 Main St." Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+
+					<TextBlock Grid.Row="8" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Address 2" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="8" Grid.Column="1" Text="Apt. 101" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+
+					<TextBlock Grid.Row="9" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="City" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="9" Grid.Column="1" Text="Beverly Hills" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+
+					<TextBlock Grid.Row="9" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="State" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="9" Grid.Column="3" Text="CA" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+
+					<TextBlock Grid.Row="10" Grid.Column="0" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Zip" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="10" Grid.Column="1" Text="90210" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+
+					<TextBlock Grid.Row="10" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Country" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="10" Grid.Column="3" Text="U. S. of A." Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+
+					<TextBlock Grid.Row="11" Grid.Column="0" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Phone" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="11" Grid.Column="1" Text="555-555-5555" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+
+				</Grid>
+			</sdk:TabItem>
+			<sdk:TabItem x:Name="Access" Header="Access" Style="{StaticResource TabItem-Sketch}">
+				<Grid>
+					<sdk:DataGrid AutoGenerateColumns="False" ItemsSource="{Binding Data}">
+						<sdk:DataGrid.Columns>
+							<sdk:DataGridTextColumn Binding="{Binding GroupName}" Header="GroupName"/>
+							<sdk:DataGridTextColumn Binding="{Binding Description}" Header="Description"/>
+						</sdk:DataGrid.Columns>
+					</sdk:DataGrid>				
+				</Grid>
+			</sdk:TabItem>
+			<sdk:TabItem x:Name="BillingAddress" Header="Billing Address" Style="{StaticResource TabItem-Sketch}">
+				<Grid Background="#FFE5E5E5">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<TextBlock Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Billing Contact Information" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="1" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Name 1" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Name 2" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="3" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Name 3" VerticalAlignment="Top"/>
+
+					<TextBox Grid.Row="1" Grid.Column="1" Text="Evan Case" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+					<TextBox Grid.Row="2" Grid.Column="1" Text="" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+					<TextBox Grid.Row="3" Grid.Column="1" Text="" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+							
+					<TextBlock Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Address Information" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="7" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Address 1" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="7" Grid.Column="1" Text="123 Main St." Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+
+					<TextBlock Grid.Row="8" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Address 2" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="8" Grid.Column="1" Text="Apt. 101" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+
+					<TextBlock Grid.Row="9" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="City" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="9" Grid.Column="1" Text="Beverly Hills" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+
+					<TextBlock Grid.Row="7" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="State" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="7" Grid.Column="3" Text="CA" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+
+					<TextBlock Grid.Row="10" Grid.Column="0" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Zip" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="10" Grid.Column="1" Text="90210" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+
+					<TextBlock Grid.Row="8" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Country" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="8" Grid.Column="3" Text="U. S. of A." Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+
+					<TextBlock Grid.Row="9" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Phone" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="9" Grid.Column="3" Text="555-555-5555" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto"/>
+
+				</Grid>
+			</sdk:TabItem>
+			<sdk:TabItem x:Name="ReportSettings" Header="Report Settings" Style="{StaticResource TabItem-Sketch}">
+				<Grid Background="#FFE5E5E5">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<TextBlock Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Report Settings" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="1" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Accrued Interest" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Reporting Currency" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="3" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Security Symbol" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="4" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Number of Copies" VerticalAlignment="Top"/>
+					<ComboBox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" Style="{StaticResource ComboBox-Sketch}" VerticalAlignment="Top">
+						<ComboBoxItem Content="Use Settings" Style="{StaticResource ComboBoxItem-Sketch}" IsSelected="True"/>
+						<ComboBoxItem Content="Do Not Show on Reports" Style="{StaticResource ComboBoxItem-Sketch}"/>
+						<ComboBoxItem Content="All Reports as of Trade Date AM" Style="{StaticResource ComboBoxItem-Sketch}"/>
+						<ComboBoxItem Content="All Reports as of Trade Date PM" Style="{StaticResource ComboBoxItem-Sketch}"/>
+						<ComboBoxItem Content="All Reports as of Settle Date AM" Style="{StaticResource ComboBoxItem-Sketch}"/>
+						<ComboBoxItem Content="All Reports as of Settle Date PM" Style="{StaticResource ComboBoxItem-Sketch}"/>
+						<ComboBoxItem Content="Performance Reports as of Trade Date AM" Style="{StaticResource ComboBoxItem-Sketch}"/>
+						<ComboBoxItem Content="Performance Reports as of Trade Date PM" Style="{StaticResource ComboBoxItem-Sketch}"/>
+						<ComboBoxItem Content="Performance Reports as of Settle Date AM" Style="{StaticResource ComboBoxItem-Sketch}"/>
+						<ComboBoxItem Content="Performance Reports as of Settle Date PM" Style="{StaticResource ComboBoxItem-Sketch}"/>
+					</ComboBox>
+					<ComboBox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" Style="{StaticResource ComboBox-Sketch}" VerticalAlignment="Top">
+						<ComboBoxItem Content="Use Settings" Style="{StaticResource ComboBoxItem-Sketch}" IsSelected="True"/>
+						<ComboBoxItem Content="US Dollar" Style="{StaticResource ComboBoxItem-Sketch}"/>
+					</ComboBox>
+					<ComboBox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" Style="{StaticResource ComboBox-Sketch}" VerticalAlignment="Top">
+						<ComboBoxItem Content="Use Settings" Style="{StaticResource ComboBoxItem-Sketch}" IsSelected="True"/>
+						<ComboBoxItem Content="Show (12 Characters)" Style="{StaticResource ComboBoxItem-Sketch}"/>
+						<ComboBoxItem Content="Show (25 Characters)" Style="{StaticResource ComboBoxItem-Sketch}"/>
+					</ComboBox>
+					<TextBox Grid.Row="4" Grid.Column="1" Text="" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto" Width="30" HorizontalAlignment="Left"/>
+					<TextBlock Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Footnotes" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Footnote Line 1" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Footnote Line 2" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Footnote Line 3" VerticalAlignment="Top"/>
+					<ComboBox Grid.Column="3" HorizontalAlignment="Left" Grid.Row="1" Style="{StaticResource ComboBox-Sketch}" VerticalAlignment="Top">
+						<ComboBoxItem Content="Use Settings" Style="{StaticResource ComboBoxItem-Sketch}" IsSelected="True"/>
+						<ComboBoxItem Content="Show Footnotes" Style="{StaticResource ComboBoxItem-Sketch}"/>
+						<ComboBoxItem Content="Hide Footnotes" Style="{StaticResource ComboBoxItem-Sketch}"/>
+					</ComboBox>
+					<TextBox Grid.Row="2" Grid.Column="3" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto" Width="100" HorizontalAlignment="Left"/>
+					<TextBox Grid.Row="3" Grid.Column="3" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto" Width="100" HorizontalAlignment="Left"/>
+					<TextBox Grid.Row="4" Grid.Column="3" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto" Width="100" HorizontalAlignment="Left"/>
+
+					<TextBlock Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Bank Letter Address (Optional)" VerticalAlignment="Top"/>
+					
+					<TextBlock Grid.Row="6" Grid.Column="0" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Line 1" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto" HorizontalAlignment="Stretch"/>
+					<TextBlock Grid.Row="7" Grid.Column="0" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Line 2" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto" HorizontalAlignment="Stretch"/>
+					<TextBlock Grid.Row="8" Grid.Column="0" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Line 3" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto" HorizontalAlignment="Stretch"/>
+					<TextBlock Grid.Row="9" Grid.Column="0" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Line 4" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto" HorizontalAlignment="Stretch"/>
+					<TextBlock Grid.Row="10" Grid.Column="0" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Line 5" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto" HorizontalAlignment="Stretch"/>
+					<TextBlock Grid.Row="11" Grid.Column="0" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Line 6" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto" HorizontalAlignment="Stretch"/>
+				</Grid>
+			</sdk:TabItem>
+			<sdk:TabItem x:Name="Labels" Header="Labels" Style="{StaticResource TabItem-Sketch}">
+				<Grid Background="#FFE5E5E5">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="350" />
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<TextBlock Grid.Row="0" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Label" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Definition" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="1" Grid.Column="0" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto" Width="100" HorizontalAlignment="Left"/>
+					<TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource BasicTextBox-Sketch}" FontSize="14" Height="Auto" Width="175" HorizontalAlignment="Left"/>
+					<Button Content="Add" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource Button-Sketch}" VerticalAlignment="Top" Width="75"/>
+					<TextBlock Grid.ColumnSpan="2" Grid.Row="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Custom Labels" VerticalAlignment="Top"/>
+					<Button Content="Delete" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource Button-Sketch}" VerticalAlignment="Top" Width="75"/>
+					<TextBox Grid.Row="3" Grid.ColumnSpan="3" Style="{StaticResource BasicTextBox-Sketch}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+					<StackPanel Grid.Row="4" Grid.ColumnSpan="3" HorizontalAlignment="Center" Orientation="Horizontal">
+						<Button Content="OK" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource Button-Sketch}" VerticalAlignment="Top" Width="75" Margin="5"/>
+						<Button Content="Cancel" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource Button-Sketch}" VerticalAlignment="Top" Width="75" Margin="5"/>
+						<Button Content="Help" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource Button-Sketch}" VerticalAlignment="Top" Width="75" Margin="5"/>
+					</StackPanel>
+				</Grid>
+			</sdk:TabItem>
+			<sdk:TabItem x:Name="TransactionSettings" Header="Transaction Settings" Style="{StaticResource TabItem-Sketch}">
+				<Grid Background="#FFE5E5E5">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<TextBlock Grid.Row="0" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Accounting Method" VerticalAlignment="Top"/>
+					<ComboBox Grid.Row="0" Grid.Column="1" Style="{StaticResource ComboBox-Sketch}" HorizontalAlignment="Left">
+						<ComboBoxItem Content="Specify"/>
+						<ComboBoxItem IsSelected="True" Content="FIFO"/>
+						<ComboBoxItem Content="LIFO"/>
+						<ComboBoxItem Content="Highest Cost"/>
+						<ComboBoxItem Content="Lowest Cost"/>
+					</ComboBox>
+					<TextBlock Grid.Row="1" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Reconciliation Close Date" VerticalAlignment="Top"/>
+					<sdk:DatePicker Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Text="05/31/2013"/>
+					<TextBlock Grid.Row="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Lot Location" VerticalAlignment="Top"/>
+					<ComboBox Grid.Row="2" HorizontalAlignment="Left" Style="{StaticResource ComboBox-Sketch}" Grid.Column="1">
+						<ComboBoxItem IsSelected="True" Content="Use Settings"/>
+						<ComboBoxItem Content="Not Classified"/>
+					</ComboBox>
+					<TextBlock Grid.Row="3" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Domicile Country" VerticalAlignment="Top"/>
+					<ComboBox Grid.Row="3" HorizontalAlignment="Left" Style="{StaticResource ComboBox-Sketch}" Grid.Column="1">
+						<ComboBoxItem IsSelected="True" Content="Use Settings"/>
+						<ComboBoxItem Content="United States"/>
+						<ComboBoxItem Content="Canada"/>
+					</ComboBox>
+					<TextBlock Grid.Row="4" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" Grid.Column="0" Text="Default Transaction Accounts"/>
+					<TextBlock Grid.Row="5" Grid.Column="1" Style="{StaticResource BasicTextBlock-Sketch}" Text="Type"/>
+					<TextBlock Grid.Row="5" Grid.Column="2" Style="{StaticResource BasicTextBlock-Sketch}" Text="Symbol"/>
+					<TextBlock Grid.Row="6" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}" Text="Cash"/>
+					<ComboBox Grid.Row="6" HorizontalAlignment="Left" Style="{StaticResource ComboBox-Sketch}" Grid.Column="1">
+						<ComboBoxItem IsSelected="True" Content="caus"/>
+						<ComboBoxItem Content="mmus"/>
+					</ComboBox>
+					<TextBox Grid.Row="6" Grid.Column="2" Style="{StaticResource BasicTextBox-Sketch}" HorizontalAlignment="Left" Text="cash" Width="200"/>
+					<TextBox Grid.Row="7" Grid.Column="2" Style="{StaticResource BasicTextBox-Sketch}" HorizontalAlignment="Left" Text="cash" Width="200"/>
+					<TextBlock Grid.Row="7" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}" Text="Income Cash"/>
+					<ComboBox Grid.Row="7" HorizontalAlignment="Left" Style="{StaticResource ComboBox-Sketch}" Grid.Column="1">
+						<ComboBoxItem IsSelected="True" Content="caus"/>
+						<ComboBoxItem Content="mmus"/>
+					</ComboBox>
+					<TextBox Grid.Row="8" Grid.Column="2" Style="{StaticResource BasicTextBox-Sketch}" HorizontalAlignment="Left" Text="jpm" Width="200"/>
+					<TextBlock Grid.Row="8" Grid.Column="0" Style="{StaticResource BasicTextBlock-Sketch}" Text="Broker"/>
+					<ComboBox Grid.Row="8" HorizontalAlignment="Left" Style="{StaticResource ComboBox-Sketch}" Grid.Column="1">
+						<ComboBoxItem IsSelected="True" Content="brus"/>
+					</ComboBox>
+				</Grid>
+			</sdk:TabItem>
+			<sdk:TabItem x:Name="Reinvest" Header="Reinvest" Style="{StaticResource TabItem-Sketch}">
+				<Grid Background="#FFE5E5E5">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<TextBlock Grid.Row="0" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Mutual Fund Income" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="1" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Dividends" VerticalAlignment="Top"/>
+					<ComboBox Grid.Row="1" HorizontalAlignment="Left" Style="{StaticResource ComboBox-Sketch}" Grid.Column="1">
+						<ComboBoxItem IsSelected="True" Content="Use Settings"/>
+						<ComboBoxItem Content="Never Reinvest"/>
+					</ComboBox>
+					<TextBlock Grid.Row="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Non Reinvesting Funds" VerticalAlignment="Top"/>
+					<TextBox Grid.Column="1" Grid.Row="2" Style="{StaticResource BasicTextBox-Sketch}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="75"/>
+					<StackPanel Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" Orientation="Horizontal">
+						<Button Content="Add" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource Button-Sketch}" VerticalAlignment="Top" Width="75" Margin="5"/>
+						<Button Content="Remove" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource Button-Sketch}" VerticalAlignment="Top" Width="75" Margin="5"/>
+					</StackPanel>
+					<TextBlock Grid.Row="4" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Exceptions" VerticalAlignment="Top"/>
+					<TextBox Grid.Column="1" Grid.Row="4" Style="{StaticResource BasicTextBox-Sketch}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="75"/>
+
+					<TextBlock Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Mutual Fund Capital Gains" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Dividends" VerticalAlignment="Top"/>
+					<ComboBox Grid.Row="1" HorizontalAlignment="Left" Style="{StaticResource ComboBox-Sketch}" Grid.Column="3">
+						<ComboBoxItem IsSelected="True" Content="Use Settings"/>
+						<ComboBoxItem Content="Never Reinvest"/>
+					</ComboBox>
+					<TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Non Reinvesting Funds" VerticalAlignment="Top"/>
+					<TextBox Grid.Column="3" Grid.Row="2" Style="{StaticResource BasicTextBox-Sketch}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="75"/>
+					<StackPanel Grid.Row="3" Grid.Column="3" HorizontalAlignment="Center" Orientation="Horizontal">
+						<Button Content="Add" HorizontalAlignment="Left" Style="{StaticResource Button-Sketch}" VerticalAlignment="Top" Width="75" Margin="5"/>
+						<Button Content="Remove" HorizontalAlignment="Left" Style="{StaticResource Button-Sketch}" VerticalAlignment="Top" Width="75" Margin="5"/>
+					</StackPanel>
+					<TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Exceptions" VerticalAlignment="Top"/>
+					<TextBox Grid.Column="3" Grid.Row="4" Style="{StaticResource BasicTextBox-Sketch}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="75"/>
+					<StackPanel Grid.Row="5" Grid.ColumnSpan="5" HorizontalAlignment="Center" Orientation="Horizontal">
+						<Button Content="OK" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource Button-Sketch}" VerticalAlignment="Top" Width="75" Margin="5"/>
+						<Button Content="Cancel" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource Button-Sketch}" VerticalAlignment="Top" Width="75" Margin="5"/>
+						<Button Content="Print" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource Button-Sketch}" VerticalAlignment="Top" Width="75" Margin="5"/>
+						<Button Content="Apply" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource Button-Sketch}" VerticalAlignment="Top" Width="75" Margin="5"/>
+						<Button Content="Help" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource Button-Sketch}" VerticalAlignment="Top" Width="75" Margin="5"/>
+					</StackPanel>
+				</Grid>
+			</sdk:TabItem>
+			<sdk:TabItem x:Name="Billing" Header="Billing" Style="{StaticResource TabItem-Sketch}">
+				<Grid Background="#FFE5E5E5">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<TextBlock Grid.Row="0" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Billing Method" VerticalAlignment="Top"/>
+					<ComboBox Grid.Column="1" Style="{StaticResource ComboBox-Sketch}" HorizontalAlignment="Left">
+						<ComboBoxItem IsSelected="True" Content="Use Settings"/>
+						<ComboBoxItem Content="Tiered Billing"/>
+						<ComboBoxItem Content="Flat Fee"/>
+					</ComboBox>
+					<TextBlock Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Flat Fee" VerticalAlignment="Top"/>
+					<TextBox Grid.Column="3" HorizontalAlignment="Left" IsEnabled="False" Width="75"/>
+					<TextBlock Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Tiered Billing" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Brackets" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="2" Grid.Column="3" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Rates" VerticalAlignment="Top"/>
+					<TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="$0 to" VerticalAlignment="Top"/>
+					<TextBox Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" IsEnabled="False" Width="75"/>
+					<TextBox Grid.Row="4" Grid.Column="2" HorizontalAlignment="Left" IsEnabled="False" Width="75"/>
+					<TextBox Grid.Row="5" Grid.Column="2" HorizontalAlignment="Left" IsEnabled="False" Width="75"/>
+					<TextBox Grid.Row="6" Grid.Column="2" HorizontalAlignment="Left" IsEnabled="False" Width="75"/>
+					<TextBox Grid.Row="7" Grid.Column="3" HorizontalAlignment="Left" IsEnabled="False" Width="75"/>
+					<TextBox Grid.Row="3" Grid.Column="3" HorizontalAlignment="Left" IsEnabled="False" Width="75"/>
+					<TextBox Grid.Row="4" Grid.Column="3" HorizontalAlignment="Left" IsEnabled="False" Width="75"/>
+					<TextBox Grid.Row="5" Grid.Column="3" HorizontalAlignment="Left" IsEnabled="False" Width="75"/>
+					<TextBox Grid.Row="6" Grid.Column="3" HorizontalAlignment="Left" IsEnabled="False" Width="75"/>
+					<TextBox Grid.Row="7" Grid.Column="3" HorizontalAlignment="Left" IsEnabled="False" Width="75"/>
+
+					<TextBlock Grid.Row="8" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Payment Method" VerticalAlignment="Top"/>
+					<ComboBox Grid.Row="8" Grid.Column="1" Style="{StaticResource ComboBox-Sketch}" IsEnabled="False"/>
+					<TextBlock Grid.Row="9" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Past Due Amount" VerticalAlignment="Top"/>
+					<ComboBox Grid.Row="9" Grid.Column="1" Style="{StaticResource ComboBox-Sketch}" IsEnabled="False"/>
+
+
+					<TextBlock Grid.Row="8" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Minimum Fee" VerticalAlignment="Top"/>
+					<ComboBox Grid.Row="8" Grid.Column="3" Style="{StaticResource ComboBox-Sketch}" IsEnabled="False"/>
+					<TextBlock Grid.Row="9" Grid.Column="2" HorizontalAlignment="Left" Style="{StaticResource BasicTextBlock-Sketch}" TextWrapping="Wrap" Text="Tax Rate" VerticalAlignment="Top"/>
+					<ComboBox Grid.Row="9" Grid.Column="3" Style="{StaticResource ComboBox-Sketch}" IsEnabled="False"/>
+					<StackPanel Grid.Row="10" Grid.ColumnSpan="5" HorizontalAlignment="Center" Orientation="Horizontal">
+						<Button Content="OK" HorizontalAlignment="Left" Style="{StaticResource Button-Sketch}" VerticalAlignment="Top" Width="75" Margin="5"/>
+						<Button Content="Cancel" HorizontalAlignment="Left" Style="{StaticResource Button-Sketch}" VerticalAlignment="Top" Width="75" Margin="5"/>
+						<Button Content="Print" HorizontalAlignment="Left" Style="{StaticResource Button-Sketch}" VerticalAlignment="Top" Width="75" Margin="5"/>
+						<Button Content="Apply" HorizontalAlignment="Left" Style="{StaticResource Button-Sketch}" VerticalAlignment="Top" Width="75" Margin="5"/>
+						<Button Content="Help" HorizontalAlignment="Left" Style="{StaticResource Button-Sketch}" VerticalAlignment="Top" Width="75" Margin="5"/>
+					</StackPanel>
+				</Grid>
+			</sdk:TabItem>
+		</sdk:TabControl>
+		<StackPanel Grid.Row="4" Grid.Column="2" Orientation="Horizontal">
+			<epm:ButtonWithIconMockup IconImage="Folder" Content="case.cli" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top"/>
+			<epm:ButtonWithIconMockup IconImage="Folder" Content="casef.cli" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Background="#aeaeae">
+				<i:Interaction.Triggers>
+					<i:EventTrigger EventName="Click">
+						<pi:NavigateToScreenAction TargetScreen="SeattleSlew_WireframesScreens.casef_case_cli"/>
+					</i:EventTrigger>
+				</i:Interaction.Triggers>
+			</epm:ButtonWithIconMockup>
+		</StackPanel>
+	</Grid>
+</UserControl>

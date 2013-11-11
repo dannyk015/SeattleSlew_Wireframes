@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ExpressionBlendVersion>5.0.40218.0</ExpressionBlendVersion>
+    <ProjectGuid>{ad211307-046e-467b-bf6d-318fc808c6ca}</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SeattleSlew_WireframesScreens</RootNamespace>
+    <AssemblyName>SeattleSlew_Wireframes.Screens</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Prototyping.MockupsSL">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\..\Program Files %28x86%29\Microsoft SDKs\Expression\Blend 4 Sketch Mockups\Silverlight\v4.0\Libraries\Microsoft.Expression.Prototyping.MockupsSL.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Controls.Data" />
+    <Reference Include="System.Windows.Controls.Data.Input" />
+    <Reference Include="System.Windows.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <PropertyGroup>
+    <ExpressionBlendPrototypingEnabled>true</ExpressionBlendPrototypingEnabled>
+    <ExpressionBlendPrototypeHarness>false</ExpressionBlendPrototypeHarness>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Controls" />
+    <Reference Include="System.Windows.Interactivity" />
+    <Reference Include="Microsoft.Expression.Interactions" />
+    <Reference Include="Microsoft.Expression.Prototyping.Interactivity" />
+    <Reference Include="Microsoft.Expression.Prototyping.Runtime" />
+    <Reference Include="Microsoft.Expression.Prototyping.SketchControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveXToolbar.xaml.cs">
+      <DependentUpon>ActiveXToolbar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="all_grp.xaml.cs">
+      <DependentUpon>all_grp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppraisalReport.xaml.cs">
+      <DependentUpon>AppraisalReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AssetClass.xaml.cs">
+      <DependentUpon>AssetClass.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="balanced_cpg.xaml.cs">
+      <DependentUpon>balanced_cpg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BaseRate.xaml.cs">
+      <DependentUpon>BaseRate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Buttons.xaml.cs">
+      <DependentUpon>Buttons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonStack.xaml.cs">
+      <DependentUpon>ButtonStack.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="casefam_grp.xaml.cs">
+      <DependentUpon>casefam_grp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="casefam_pbf.xaml.cs">
+      <DependentUpon>casefam_pbf.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="casefam_prf.xaml.cs">
+      <DependentUpon>casefam_prf.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="casef_case_cli.xaml.cs">
+      <DependentUpon>casef_case_cli.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="casef_cli.xaml.cs">
+      <DependentUpon>casef_cli.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="casef_pbf.xaml.cs">
+      <DependentUpon>casef_pbf.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="casef_prf.xaml.cs">
+      <DependentUpon>casef_prf.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="case_casef_cli.xaml.cs">
+      <DependentUpon>case_casef_cli.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="case_cli.xaml.cs">
+      <DependentUpon>case_cli.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="case_pbf.xaml.cs">
+      <DependentUpon>case_pbf.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="case_prf.xaml.cs">
+      <DependentUpon>case_prf.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Copy_of_Start.xaml.cs">
+      <DependentUpon>Copy_of_Start.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Country.xaml.cs">
+      <DependentUpon>Country.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CouponDate.xaml.cs">
+      <DependentUpon>CouponDate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Currency.xaml.cs">
+      <DependentUpon>Currency.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog_NavPane.xaml.cs">
+      <DependentUpon>Dialog_NavPane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="djia_dex.xaml.cs">
+      <DependentUpon>djia_dex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="equity_cpg.xaml.cs">
+      <DependentUpon>equity_cpg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Factor.xaml.cs">
+      <DependentUpon>Factor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FilesTab.xaml.cs">
+      <DependentUpon>FilesTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fixed_cpg.xaml.cs">
+      <DependentUpon>fixed_cpg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ForwardRate.xaml.cs">
+      <DependentUpon>ForwardRate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IndustryGroup.xaml.cs">
+      <DependentUpon>IndustryGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IndustrySector.xaml.cs">
+      <DependentUpon>IndustrySector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="master_grp.xaml.cs">
+      <DependentUpon>master_grp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NavPane.xaml.cs">
+      <DependentUpon>NavPane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Portfolios_Only.xaml.cs">
+      <DependentUpon>Portfolios_Only.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Portfolios_Only_1.xaml.cs">
+      <DependentUpon>Portfolios_Only_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Prices.xaml.cs">
+      <DependentUpon>Prices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ResetRate.xaml.cs">
+      <DependentUpon>ResetRate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\AssetClassSampleDataSource\AssetClassSampleDataSource.xaml.cs">
+      <DependentUpon>AssetClassSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\BaseRateSampleDataSource\BaseRateSampleDataSource.xaml.cs">
+      <DependentUpon>BaseRateSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\CompositeMemberSampleDataSource\CompositeMemberSampleDataSource.xaml.cs">
+      <DependentUpon>CompositeMemberSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\CountrySampleDataSource\CountrySampleDataSource.xaml.cs">
+      <DependentUpon>CountrySampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\CouponDateSampleDataSource\CouponDateSampleDataSource.xaml.cs">
+      <DependentUpon>CouponDateSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\CurrencySampleDataSource\CurrencySampleDataSource.xaml.cs">
+      <DependentUpon>CurrencySampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\FactorSampleDataSource\FactorSampleDataSource.xaml.cs">
+      <DependentUpon>FactorSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\ForwardRatesSampleDataSource\ForwardRatesSampleDataSource.xaml.cs">
+      <DependentUpon>ForwardRatesSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\GroupMemberSampleDataSource\GroupMemberSampleDataSource.xaml.cs">
+      <DependentUpon>GroupMemberSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\IndustryGroupSampleDataSource\IndustryGroupSampleDataSource.xaml.cs">
+      <DependentUpon>IndustryGroupSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\IndustrySectorSampleDataSource\IndustrySectorSampleDataSource.xaml.cs">
+      <DependentUpon>IndustrySectorSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\PortfoliosDataSource\PortfoliosDataSource.xaml.cs">
+      <DependentUpon>PortfoliosDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\PriceSampleDataSource\PriceSampleDataSource.xaml.cs">
+      <DependentUpon>PriceSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\ResetRateSampleDataSource\ResetRateSampleDataSource.xaml.cs">
+      <DependentUpon>ResetRateSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\SecTypeGroupSampleDataSource\SecTypeGroupSampleDataSource.xaml.cs">
+      <DependentUpon>SecTypeGroupSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\SecTypeSampleDataSource\SecTypeSampleDataSource.xaml.cs">
+      <DependentUpon>SecTypeSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\securitiesSampleDataSource\securitiesSampleDataSource.xaml.cs">
+      <DependentUpon>securitiesSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\splitSampleDataSource\splitSampleDataSource.xaml.cs">
+      <DependentUpon>splitSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\SpotRateSampleDataSource\SpotRateSampleDataSource.xaml.cs">
+      <DependentUpon>SpotRateSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\StateSampleDataSource\StateSampleDataSource.xaml.cs">
+      <DependentUpon>StateSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\UserGroupsSampleDataSource\UserGroupsSampleDataSource.xaml.cs">
+      <DependentUpon>UserGroupsSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\WithholdingTaxSampleDataSource\WithholdingTaxSampleDataSource.xaml.cs">
+      <DependentUpon>WithholdingTaxSampleDataSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SecType.xaml.cs">
+      <DependentUpon>SecType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SecTypeGroup.xaml.cs">
+      <DependentUpon>SecTypeGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Securities_ADVS.xaml.cs">
+      <DependentUpon>Securities_ADVS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Security_Detail.xaml.cs">
+      <DependentUpon>Security_Detail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="sp500.xaml.cs">
+      <DependentUpon>sp500.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Split.xaml.cs">
+      <DependentUpon>Split.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SpotRate.xaml.cs">
+      <DependentUpon>SpotRate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Start.xaml.cs">
+      <DependentUpon>Start.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="State.xaml.cs">
+      <DependentUpon>State.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WithholdingTax.xaml.cs">
+      <DependentUpon>WithholdingTax.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ActiveXToolbar.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="all_grp.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AppraisalReport.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AssetClass.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="balanced_cpg.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BaseRate.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Buttons.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ButtonStack.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="casefam_grp.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="casefam_pbf.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="casefam_prf.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="casef_case_cli.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="casef_cli.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="casef_pbf.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="casef_prf.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="case_casef_cli.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="case_cli.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="case_pbf.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="case_prf.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Copy_of_Start.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Country.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CouponDate.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Currency.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog_NavPane.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="djia_dex.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="equity_cpg.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Factor.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FilesTab.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="fixed_cpg.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ForwardRate.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="IndustryGroup.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="IndustrySector.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="master_grp.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NavPane.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Portfolios_Only.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Portfolios_Only_1.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Prices.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProjectDataSources.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <ContainsDataSources>True</ContainsDataSources>
+    </Page>
+    <Page Include="ResetRate.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\AssetClassSampleDataSource\AssetClassSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\BaseRateSampleDataSource\BaseRateSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\CompositeMemberSampleDataSource\CompositeMemberSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\CountrySampleDataSource\CountrySampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\CouponDateSampleDataSource\CouponDateSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\CurrencySampleDataSource\CurrencySampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\FactorSampleDataSource\FactorSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\ForwardRatesSampleDataSource\ForwardRatesSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\GroupMemberSampleDataSource\GroupMemberSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\IndustryGroupSampleDataSource\IndustryGroupSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\IndustrySectorSampleDataSource\IndustrySectorSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\PortfoliosDataSource\PortfoliosDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\PriceSampleDataSource\PriceSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\ResetRateSampleDataSource\ResetRateSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\SecTypeGroupSampleDataSource\SecTypeGroupSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\SecTypeSampleDataSource\SecTypeSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\securitiesSampleDataSource\securitiesSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\splitSampleDataSource\splitSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\SpotRateSampleDataSource\SpotRateSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\StateSampleDataSource\StateSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\UserGroupsSampleDataSource\UserGroupsSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\WithholdingTaxSampleDataSource\WithholdingTaxSampleDataSource.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SecType.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SecTypeGroup.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Securities_ADVS.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Security_Detail.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SketchStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\Properties\Version.cs">
+      <Link>Properties\Version.cs</Link>
+    </Compile>
+    <Page Include="sp500.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Split.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SpotRate.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Start.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="State.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WithholdingTax.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Fonts\BuxtonSketch.ttf" />
+    <Resource Include="Fonts\SketchFlow Print.ttf" />
+    <Resource Include="Fonts\SegoeMarker.ttf" />
+    <Resource Include="Images\activex_audit.png" />
+    <Resource Include="Images\activex_blotter.png" />
+    <Resource Include="Images\activex_cpg.png" />
+    <Resource Include="Images\activex_deleted.png" />
+    <Resource Include="Images\activex_grp.png" />
+    <Resource Include="Images\activex_index.png" />
+    <Resource Include="Images\activex_perf.png" />
+    <Resource Include="Images\activex_portfolio.png" />
+    <Resource Include="Images\activex_region.png" />
+    <Resource Include="Images\axys_32.ico" />
+    <Resource Include="Images\blotter_post.png" />
+    <Resource Include="Images\car_rep.png" />
+    <Resource Include="Images\chart.png" />
+    <Resource Include="Images\copy.png" />
+    <Resource Include="Images\cut.png" />
+    <Resource Include="Images\delete.png" />
+    <Resource Include="Images\delete_inactive.png" />
+    <Resource Include="Images\edit.png" />
+    <Resource Include="Images\excel.png" />
+    <Resource Include="Images\file_browse.png" />
+    <Resource Include="Images\find.png" />
+    <Resource Include="Images\folder.png" />
+    <Resource Include="Images\new.png" />
+    <Resource Include="Images\open.png" />
+    <Resource Include="Images\page_settings.png" />
+    <Resource Include="Images\paste.png" />
+    <Resource Include="Images\portfolio.png" />
+    <Resource Include="Images\portfolio_go_to.png" />
+    <Resource Include="Images\portfolio_group.png" />
+    <Resource Include="Images\print.png" />
+    <Resource Include="Images\print_all.png" />
+    <Resource Include="Images\print_preview.png" />
+    <Resource Include="Images\rebalance.png" />
+    <Resource Include="Images\refresh.png" />
+    <Resource Include="Images\replace.png" />
+    <Resource Include="Images\report_style.png" />
+    <Resource Include="Images\save.png" />
+    <Resource Include="Images\save_as.png" />
+    <Resource Include="Images\select_all.png" />
+    <Resource Include="Images\undo.png" />
+    <Resource Include="Images\validate.png" />
+    <Resource Include="Images\view_toggle.png" />
+    <Resource Include="Images\zoom_in.png" />
+    <Resource Include="Images\zoom_out.png" />
+    <DesignTimeOnly Include="SampleData\securitiesSampleDataSource\securitiesSampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\ForwardRatesSampleDataSource\ForwardRatesSampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\SpotRateSampleDataSource\SpotRateSampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\PriceSampleDataSource\PriceSampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\FactorSampleDataSource\FactorSampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\splitSampleDataSource\splitSampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\WithholdingTaxSampleDataSource\WithholdingTaxSampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\BaseRateSampleDataSource\BaseRateSampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\ResetRateSampleDataSource\ResetRateSampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\CouponDateSampleDataSource\CouponDateSampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\SecTypeSampleDataSource\SecTypeSampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\IndustryGroupSampleDataSource\IndustryGroupSampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\IndustrySectorSampleDataSource\IndustrySectorSampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\AssetClassSampleDataSource\AssetClassSampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\SecTypeGroupSampleDataSource\SecTypeGroupSampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\CountrySampleDataSource\CountrySampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\CurrencySampleDataSource\CurrencySampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\StateSampleDataSource\StateSampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\PortfoliosDataSource\PortfoliosDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\UserGroupsSampleDataSource\UserGroupsSampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\GroupMemberSampleDataSource\GroupMemberSampleDataSource.xsd" />
+    <DesignTimeOnly Include="SampleData\CompositeMemberSampleDataSource\CompositeMemberSampleDataSource.xsd" />
+    <Resource Include="Sketch.Flow" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	     Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

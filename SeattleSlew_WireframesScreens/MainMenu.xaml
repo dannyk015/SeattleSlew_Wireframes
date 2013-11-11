@@ -1,0 +1,309 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:pi="http://schemas.microsoft.com/prototyping/2010/interactivity" x:Name="SeattleSlewSketchScreens_MainWindow_Name"
+	mc:Ignorable="d"
+	x:Class="SeattleSlewSketchScreens.MainWindow"
+	Height="Auto" HorizontalAlignment="Stretch">
+	<Border BorderThickness="0,0,0,1" BorderBrush="#FFAAAAAA">
+	<Grid Background="#dbdce1">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<Menu Grid.Row="0" Height="26" VerticalAlignment="Top">
+			<Menu.Background>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#f3f6f6" Offset="0"/>
+					<GradientStop Color="#dbdce1" Offset="1"/>
+				</LinearGradientBrush>
+			</Menu.Background>
+			<MenuItem Header="File" VerticalAlignment="Top" Foreground="#FF333333" FontFamily="Verdana" FontSize="11" Margin="10,3,0,0">
+				<MenuItem Header="New" />
+				<MenuItem Header="Open" />
+				<MenuItem Header="Close" />
+				<Separator/>
+				<MenuItem Header="Save" />
+				<MenuItem Header="Save As" />
+				<Separator/>
+				<MenuItem Header="Delete" />
+				<MenuItem Header="Rename" />
+				<Separator/>
+				<MenuItem Header="Import" />
+				<MenuItem Header="Export" />
+				<Separator/>
+				<MenuItem Header="Print Preview" />
+				<MenuItem Header="Print" />
+				<MenuItem Header="Print Setup" />
+				<MenuItem Header="Page Setup" />
+				<Separator/>
+				<MenuItem Header="Recent File 1" />
+				<MenuItem Header="Recent File 2" />
+				<MenuItem Header="Recent File 3" />
+				<MenuItem Header="Recent File 4" />
+				<Separator/>
+				<MenuItem Header="Exit" />
+			</MenuItem>
+			<MenuItem Header="View" VerticalAlignment="Top" Foreground="#FF333333" FontFamily="Verdana" FontSize="11" Margin="30,3,0,0">
+				<MenuItem Header="Toolbar">
+					<MenuItem Header="Menu Bar" IsCheckable="True" IsChecked="True"/>
+					<MenuItem Header="Command Bar" IsCheckable="True" IsChecked="True"/>
+					<MenuItem Header="Status Bar" IsCheckable="True" IsEnabled="True"/>
+					<Separator/>
+					<MenuItem Header="Navigation Pane" IsCheckable="True" IsChecked="True" InputGestureText="Alt + S"/>
+				</MenuItem>
+			</MenuItem>
+			<MenuItem Header="Edit" VerticalAlignment="Top" Foreground="#FF333333" FontFamily="Verdana" FontSize="11" Margin="30,3,0,0">
+				<MenuItem Header="Undo" />
+				<Separator/>    			
+				<MenuItem Header="Cut" />
+				<MenuItem Header="Copy" />
+				<MenuItem Header="Paste" />
+				<Separator/>    			
+				<MenuItem Header="Select All" />
+				<Separator/>    			
+				<MenuItem Header="Find" />
+				<MenuItem Header="Replace" />
+				<MenuItem Header="Go To" />
+				<MenuItem Header="Validate" />
+				<Separator/>    			
+				<MenuItem Header="Delete" />
+				<MenuItem Header="Insert" />
+				<MenuItem Header="Restore" />
+				<Separator/>
+				<MenuItem Header="Zoom" />
+				<MenuItem Header="Settings" />
+				<Separator/>    			
+				<MenuItem Header="Options" />
+				<MenuItem Header="Font" />
+				<MenuItem Header="Cash Balance" />
+				<MenuItem Header="Post/Hold" />
+				<MenuItem Header="Browse" />
+				<MenuItem Header="Mixed Case" />
+				<MenuItem Header="Tran Code Case" />
+			</MenuItem>
+			<MenuItem Header="Settings" VerticalAlignment="Top" Foreground="#FF333333" FontFamily="Verdana" FontSize="11" Margin="30,3,0,0">
+				<MenuItem Header="Company Settings" />
+				<MenuItem Header="User Settings" />
+			</MenuItem>
+			<MenuItem Header="Reports" VerticalAlignment="Top" Foreground="#FF333333" FontFamily="Verdana" FontSize="11" Margin="30,3,0,0">
+				<MenuItem Header="Portfolio" >
+					<MenuItem Header="Summary" />
+					<MenuItem Header="Portfolio Summary and Target" />
+					<MenuItem Header="Appraisal" >
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Click">
+								<pi:NavigateToScreenAction TargetScreen="SeattleSlewSketchScreens.ReportWindow"/>
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</MenuItem>
+					<MenuItem Header="Appraisal with Income" />
+					<MenuItem Header="Realized Gains/Losses" />
+					<MenuItem Header="Unrealized Gains/Losses" />
+					<MenuItem Header="Transaction Summary" />
+					<MenuItem Header="Summary by Transaction Type" />
+					<MenuItem Header="Income and Expenses" />
+					<MenuItem Header="Dividend - Security Holding Period" />
+					<MenuItem Header="Cash Ledger" />
+					<MenuItem Header="Withholding Tax Reclaim" />
+					<MenuItem Header="Purchase and Sale" />
+					<MenuItem Header="Portfolio Diversification" />
+					<MenuItem Header="Portfolio Activity Summary" />
+					<MenuItem Header="Largest Holdings" />
+					<MenuItem Header="Portfolio Turnover" />
+					<MenuItem Header="Cover Page" />
+					<MenuItem Header="List Missing Cost Basis Data" />
+					<MenuItem Header="Billing Statements" />
+					<MenuItem Header="Bank Notification Letter" />
+					<Separator />
+					<MenuItem Header="Appraisal Without Costs" />
+					<MenuItem Header="Appraisal with Yield" />
+					<MenuItem Header="1099 Reconciliation" />
+					<MenuItem Header="Funds Held by Portfolio" />
+				</MenuItem>
+				<MenuItem Header="Management" >
+					<MenuItem Header="Assets Under Management" />
+					<MenuItem Header="Master Stock or Bond" />
+					<MenuItem Header="Fundamental Data" />
+					<MenuItem Header="Securities Held Longer Than Holding Period" />
+					<MenuItem Header="Maturity and Expiration Alert" />
+					<MenuItem Header="Change in Market Value" />
+					<Separator />
+					<MenuItem Header="Portfolio Register" />
+					<MenuItem Header="Portfolio Commissions" />
+					<MenuItem Header="Broker Commissions" />
+					<MenuItem Header="Commission Purpose" />
+					<MenuItem Header="Management Fees" />
+					<MenuItem Header="Master Transaction Summary" />
+					<MenuItem Header="Master Cash Balances" />
+					<MenuItem Header="Master Interest Accruals" />
+					<MenuItem Header="Master Portfolio Turnover" />
+					<MenuItem Header="Security Cross Reference" />
+					<MenuItem Header="Security Type Cross Reference" />
+					<MenuItem Header="Multi-Security Cross Reference" />
+					<MenuItem Header="Multi-Type Cross Reference" />
+					<Separator />
+					<MenuItem Header="Buy Allocation" />
+					<MenuItem Header="Model Portfolio" />
+					<MenuItem Header="Trade Activity" />
+					<Separator />
+					<MenuItem Header="Single Fund Cross Reference" />
+					<MenuItem Header="Multi-Fund Cross Reference" />
+					<Separator />
+					<MenuItem Header="13D Report" />
+					<MenuItem Header="13F Report" />
+				</MenuItem>
+				<MenuItem Header="Fixed" >
+					<MenuItem Header="Amortization and Accretion" />
+					<MenuItem Header="Principal Paydowns and Interest Payments" />
+					<MenuItem Header="Fixed Income Portfolio" />
+					<MenuItem Header="Fixed Income Holdings" />
+					<MenuItem Header="Fixed Income Distribution" />
+					<MenuItem Header="Fixed Income Cash Projection" />
+					<MenuItem Header="Fixed Income Maturity Projection" />
+					<MenuItem Header="Interest Accruals" />
+					<MenuItem Header="Maturity and Expiration to Put/Call Dates" />
+					<MenuItem Header="Calculate Bond Interest" />
+					<MenuItem Header="Data Display" />
+				</MenuItem>
+				<MenuItem Header="Performance" >
+					<MenuItem Header="Performance" />
+					<MenuItem Header="Performance by Asset Class" />
+					<MenuItem Header="Performance by Security" />
+					<MenuItem Header="Performance Summary" />
+					<MenuItem Header="Individual Account Summary" />
+					<Separator />
+					<MenuItem Header="Performance History" />
+					<MenuItem Header="Performance History by Asset Class" />
+					<MenuItem Header="Performance History by Sector" />
+					<MenuItem Header="Performance History with User Defined Columns" />
+					<MenuItem Header="Performance History for Selected Periods" />
+					<MenuItem Header="Master Performance History with User Defined Columns" />
+					<MenuItem Header="Portfolio Performance Cross Reference" />
+					<MenuItem Header="Composite Dispersion" />
+					<Separator />
+					<MenuItem Header="Date to Date Gain and Loss" />
+					<MenuItem Header="Asset Reconciliation" />
+					<MenuItem Header="ACB Proof" />
+					<MenuItem Header="Historical Market Value" />
+					<Separator />
+					<MenuItem Header="Update Performance History" />
+					<MenuItem Header="Consolidate Performance History Transactions" />
+					<MenuItem Header="Erase Performance Data" />
+					<MenuItem Header="Significant Contributions/Withdrawals" />
+					<MenuItem Header="Composite Membership" />
+				</MenuItem>
+				<Separator />
+				<MenuItem Header="Run Last" />
+				<Separator />
+				<MenuItem Header="Appraisal" InputGestureText="Ctrl + 1">
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="MouseLeftButtonDown">
+							<pi:NavigateToScreenAction TargetScreen="SeattleSlewSketchScreens.ReportWindow"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</MenuItem>
+				<MenuItem Header="Performance" InputGestureText="Ctrl + 2"/>
+				<MenuItem Header="Update Performance History" InputGestureText="Ctrl + 3"/>
+			</MenuItem>
+			<MenuItem Header="Window" VerticalAlignment="Top" Foreground="#FF333333" FontFamily="Verdana" FontSize="11" Margin="30,3,0,0">
+				<MenuItem Header="Cascade" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<pi:NavigateToScreenAction TargetScreen="SeattleSlewSketchScreens.Cascade"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</MenuItem>
+				<MenuItem Header="Tile" />
+				<MenuItem Header="Horizontal" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<pi:NavigateToScreenAction TargetScreen="SeattleSlewSketchScreens.Split_Horizontal"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</MenuItem>
+				<MenuItem Header="Vertical" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<pi:NavigateToScreenAction TargetScreen="SeattleSlewSketchScreens.Split_Vertical"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</MenuItem>
+				<Separator />
+				<MenuItem Header="Close All Documents" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<pi:NavigateToScreenAction TargetScreen="SeattleSlewSketchScreens.Start"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</MenuItem>
+				<MenuItem Header="Next" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<pi:NavigateForwardAction/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</MenuItem>
+				<MenuItem Header="Previous" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<pi:NavigateBackAction/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</MenuItem>
+				<Separator />
+				<MenuItem Header="1 Portfolio - case.cli" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<pi:NavigateToScreenAction TargetScreen="SeattleSlewSketchScreens.Screen_1"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</MenuItem>
+				<MenuItem Header="2 Price - 123108.pri" />
+				<MenuItem Header="3 Portfolio - casej.cli" >
+					<i:Interaction.Triggers>
+						<i:EventTrigger EventName="Click">
+							<pi:NavigateToScreenAction TargetScreen="SeattleSlewSketchScreens.casej_cli"/>
+						</i:EventTrigger>
+					</i:Interaction.Triggers>
+				</MenuItem>
+			</MenuItem>
+			<MenuItem Header="Help" VerticalAlignment="Top" Foreground="#FF333333" FontFamily="Verdana" FontSize="11" Margin="30,3,0,0">
+				<MenuItem Header="Contents and Index" />
+				<MenuItem Header="About this Window" />
+				<MenuItem Header="How to Use Help" />
+				<MenuItem Header="Advent on the Web" >
+					<MenuItem Header="Advent Connection" />
+					<MenuItem Header="Advent Corporate Site" />
+				</MenuItem>
+				<Separator/>
+				<MenuItem Header="About Axys" />
+				<Separator/>
+				<MenuItem Header="Update License" />
+			</MenuItem>
+		</Menu>
+		<ToolBarTray Grid.Row="1" Background="Transparent">
+		<ToolBar Height="Auto" ToolBarTray.IsLocked="True" Margin="10,0,0,0" Background="{x:Null}">
+			<Button ToolTip="New"><Image Source="./Images/new.png" Height="16"/></Button>
+			<Button ToolTip="Open"><Image Source="./Images/open.png" Height="16" Margin="2,0,0,0"/></Button>
+			<Separator/>
+			<Button ToolTip="Save"><Image Source="./Images/save.png" Height="16" Margin="2,0,0,0"/></Button>
+			<Separator/>
+			<Button ToolTip="Cut"><Image Source="./Images/cut.png" Height="16" Margin="2,0,0,0"/></Button>
+			<Button ToolTip="Copy"><Image Source="./Images/copy.png" Height="16" Margin="2,0,0,0"/></Button>
+			<Button ToolTip="Paste"><Image Source="./Images/paste.png" Height="16" Margin="2,0,0,0"/></Button>
+			<Button ToolTip="Undo"><Image Source="./Images/undo.png" Height="16" Margin="2,0,0,0"/></Button>
+			<Separator/>
+			<Button ToolTip="Select All"><Image Source="./Images/select_all.png" Height="16" Margin="2,0,0,0"/></Button>
+			<Separator/>
+			<Button ToolTip="Print"><Image Source="./Images/print.png" Height="16" Margin="2,0,0,0"/></Button>
+			<Button ToolTip="Print Preview"><Image Source="./Images/print_preview.png" Height="16" Margin="2,0,0,0"/></Button>
+		</ToolBar>
+		</ToolBarTray>
+	</Grid>
+	</Border>
+</UserControl>
